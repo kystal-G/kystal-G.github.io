@@ -165,6 +165,11 @@
                             
                                 <!-- 当前仅支持valine/waline自带的统计功能 -->
                                 
+                                    <a id="/2021/04/01/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+                                        <i class="fa fa-eye"></i>
+                                        <span class="leancloud-visitors-count"> </span> 次阅读
+                                    </a>
+                                
                             
                             
                                 <!-- 当前仅支持waline自带的统计功能 -->
@@ -186,6 +191,30 @@
 
     <div class="hidden">
         <!-- 加载文章阅读对应的统计功能，评论自带的那种 -->
+        
+            <div id="v-comments" class="post-comments"></div>
+<script>
+    var load_comm = () => {
+        const init = () => {
+            new Valine({
+                el: '#v-comments',
+                appId: 'gD0BDrVguyGpjUqgh7IYc4BJ-gzGzoHsz',
+                appKey: 'DmDjKOkdgcMLveuQKw0bknvT',
+                visitor: true,
+                enableQQ: true,
+                path: '/index.html'
+            });
+        }
+        if (typeof Valine == 'undefined') {
+            const src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
+            $.getScript(src, init);
+        } else {
+            init();
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by Valine.</a></noscript>
+
         
     </div>
 
@@ -268,7 +297,7 @@
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
                     <ul class="kratos-social-icons">
                         
-                        
+                        <li><a href="mailto:1474959857@qq.com"><i class="fa fa-envelope"></i></a></li>
                         <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
                         
                         
@@ -291,8 +320,8 @@
                             <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
                         </div>
                         <div>
-                            
-                            
+                            <li><a href="https://beian.miit.gov.cn" rel="external nofollow" target="_blank">萌ICP备22010101号</a></li>
+                            <li><a href="http://www.beian.gov.cn" rel="external nofollow" target="_blank"><img src="/images/psr.webp" width="12" height="12">371402000001</a></li>
                         </div>
                     </ul>
                 </div>
